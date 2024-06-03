@@ -205,6 +205,14 @@
                                 echo "<a class='wyszukanie' href='index.php?id=" . $wierszz["ID"] . "'>" . $wierszz["tytul"] . "</a><br>";
                             }
                         } 
+
+                        if(isset($_GET['id'])) {
+                            $idd = $_GET['id'];
+                            $sql = "SELECT content FROM dane WHERE ID = $idd";
+                            $wyn = mysqli_query($con, $sql);
+                            $row = mysqli_fetch_row($wyn);
+                            echo $row[0];
+                        }
                         $con->close();
                     ?>
                 </div>

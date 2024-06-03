@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 5% 65% 30%;
+    background-color: rgb(221,229,244);
+}
+#pwrts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#pwrt{
+    background-color: rgb(221,229,244);
+    border: 0;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+
+}
+#strzalka_powrotna{
+    height: 40px;
+}
+#strzalka_powrotna:hover{
+    transform: scale(1.1);
+}
+#tytuly{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+h1{
+    color: gray;
+}
+h2{
+    color: rgb(189,0,0);
+}
+h1,h2{
+    margin: 10px;
+}
+#zdjecie_logo{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 20px;
+}
+img{
+    height: 80px;
+    margin: 10px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: rgb(221,229,244);
+    width: 100%;
+}
+#formularz_logowania{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    background-color: rgb(241,247,254);
+    width: 25%;
+    border-radius: 50px;
+
+}
+#formularz{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+input{
+    width: 80%;
+    height: 70px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 20px;
+    color: rgb(113,107,108);
+    padding-left: 10px;
+    font-size: large;
+}
+#ckziu{
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+button{
+    background-color: rgb(0,44,92);
+    border: 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 4px 16px 0px;
+    color: white;
+    width: 80%;
+    height: 60px;
+    border-radius: 30px;
+    font-size: larger;
+    font-weight: 600;
+    margin: 20px;
+}
+button:hover{
+    background-color: rgb(241,247,254);
+    color: rgb(0,44,92);
+}
+button:active{
+    background-color: lightblue;
+    color: rgb(0,44,92);
+}
+#przekreslone_oko, #oko,a{
+    height: 30px;
+    width: 30px;
+    z-index: 10000;
+}

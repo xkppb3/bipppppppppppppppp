@@ -189,7 +189,21 @@
             <div class="lista_hierarchiczna">
                 <div class="lista_rozwijana" id="lista_rozwijana">
                     
-                    <button id="dodajZakladkeBtn">Dodaj Zakładkę</button>
+                <form method="POST">
+                        <input type="text" name="nazwa">
+                        <input type="submit" value="DODAJ" name="dodajjj">
+                    </form>
+                        <?php
+                        if (isset($_POST['dodajjj'])) {
+
+                            $nazwa =  $_POST['nazwa'];
+
+                        
+                            $con = new mysqli("localhost", "root", "", "baza_bip");
+                            $sql = "INSERT INTO dane (tytul) VALUES ('$nazwa')";
+                            mysqli_query($con, $sql);
+                        }
+                         ?>
                   
                     <?php
                         $con = new mysqli("localhost", "root", "", "baza_bip");
@@ -289,7 +303,7 @@
                             });
                         });
 
-                        document.getElementById('dodajZakladkeBtn').addEventListener('click', function() {
+                        document.getElementById('dodajZakladkeBtn223').addEventListener('click', function() {
                             const nowaZakladka = prompt('Wpisz tytuł nowej zakładki:');
                             if (nowaZakladka) {
                                 const ul = document.querySelector('.lista_rozwijana > ul');
